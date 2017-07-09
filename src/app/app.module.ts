@@ -10,6 +10,7 @@ import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/shopping-list-edit.component';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/sh
   imports: [
     BrowserModule
   ],
-  providers: [],
+  // we will be able to use this service application wide.
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
