@@ -23,4 +23,9 @@ export class ShoppingListService {
     return this._ingredientListner;
   }
 
+  addIngredients(ingredients: Ingredient[]) {
+   this.ingredients.push(...ingredients);
+   this._ingredientListner.emit(this.ingredients.slice());
+  }
+
 }
